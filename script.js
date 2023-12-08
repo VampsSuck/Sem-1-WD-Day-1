@@ -1,8 +1,8 @@
 function changeColor(squareId){
-    var square 
-    document.getElementById.squareId
-    document.getElementById('square').style.backgroundColor = randomColor
+    var square = document.getElementById(squareId)
     var randomColor = getRandomColor()
+    square.style.backgroundColor = randomColor
+   
 }
 
 function getRandomColor(){
@@ -13,3 +13,14 @@ function getRandomColor(){
     }
     return color;
 }
+
+function flashColors(){
+    var flashes = document.querySelectorAll(".flash")
+    flashes.forEach(function(flash){
+        var randomColor = getRandomColor()
+        flash.style.backgroundColor = randomColor
+    })
+    }
+    
+
+setInterval(flashColors, 100);
